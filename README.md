@@ -11,11 +11,33 @@ Le <strong>Game of Life</strong> est seulement définie par deux règles📜:
 
 On représente les <i>cases noir</i> comme étant des <strong>cellules vivantes</strong> et les <i>cases blanches</i>, comme étant des <strong>cellules mortes</strong>.
 
-## 👨‍💻Mon programme    
+## Mon programme
+ ⇾ **Main.java**<br>
+Utilise ***JFrame*** comme fenêtres d'affichage.<br>
+Utilise ***MessageManager*** pour la gestion des messages dans la fenêtres.<br>
+Utilise ***GridPanel*** pour dessiner la matrice de données cellulaires.<br>
+⇾ **GridPanel.java**<br>
+Génération matricielle à partir d'une taille de départ pour les cellules (modifiable pour le système de zoom).<br>
+Affichage et Gestion des données cellulaires à partir d'une collection mise à jour après chaque nouvelle ***Generation***.<br>
+***Système utilitaire*** :
+- Zoom -> diminution ou augmentation de la taille des cases de la matrice
+- Gestion de la vitesse de la simulation -> diminution ou augmentation du temps de pause entre chaque génération
+- Réinstialisation des données matricielle -> clear
+- Utilisation de ***Generation*** pour la gestion de chaque génération pour une simulation.
 
-<p style="display:flex;font-weight: bold;">Programmé en<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="20" width="20" alt="csharp logo" /> avec <img height="30" width="30"src="https://img.icons8.com/?size=100&id=F7REdHlg6KJX&format=png&color=000000" /></p> 
 
-        
+##  Algorithme de Génération
+
+
+## ⌨️ Raccourcis Clavier
+- ENTER : Démarrer/Pause la simulation
+- DELETE/BACK_SPACE : Supprimer tout le panel
+- LEFT : Accélérer la simulation
+- RIGHT : Ralentir la simulation
+- UP : Zoomer
+- DOWN : Dézoomer
+- ESC : Afficher cette fenêtre d'aide
+                
         
 
                 
