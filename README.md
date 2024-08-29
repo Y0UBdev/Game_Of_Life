@@ -1,48 +1,39 @@
-# Conway's game of life
+# Conway's Game of Life
 
-“Le <strong>GameOfLife</strong> de Conway est un automate cellulaire qui représente un simulation mathématique au règle simple. Il est représenté à partir d'une grille à deux dimensions normalement infinie. Les cases blanches représentent des cellules morte et les noires, des cellules vivantes.” <span style="font-size:0.7rem;font-style: italic;">inspiré par wikipédia</span>
+Conway's Game of Life est un automate cellulaire qui simule des phénomènes biologiques à l'aide de règles mathématiques simples. Il est représenté par une grille bidimensionnelle, théoriquement infinie. Les cases blanches représentent des cellules mortes, tandis que les cases noires représentent des cellules vivantes. *(Inspiré par Wikipédia)*
 
-## Un jeu complexe ?
-Le <strong>Game of Life</strong> est seulement définie par deux règles📜:
-<ul>
-    <li>Une <i>cellule morte</i>☠️devient vivante si elle a  trois voisins en vie. </li>
-    <li>Une <i>cellule vivante</i> 💕devient morte si elle a  moins ou plus de 2 voisins en vie. Ce qui représente la sous-population et la surpopulation dans la vrai vie.</li>
-</ul>
+## 🎮 Un Jeu Complexe ?
 
-On représente les <i>cases noir</i> comme étant des <strong>cellules vivantes</strong> et les <i>cases blanches</i>, comme étant des <strong>cellules mortes</strong>.
+Le Game of Life est défini par deux règles simples 📜 :
 
-## Mon programme
- ⇾ **Main.java**<br>
-Utilise ***JFrame*** comme fenêtres d'affichage.<br>
-Utilise ***MessageManager*** pour la gestion des messages dans la fenêtres.<br>
-Utilise ***GridPanel*** pour dessiner la matrice de données cellulaires.<br>
-⇾ **GridPanel.java**<br>
-Génération matricielle à partir d'une taille de départ pour les cellules (modifiable pour le système de zoom).<br>
-Affichage et Gestion des données cellulaires à partir d'une collection mise à jour après chaque nouvelle ***Generation***.<br>
-***Système utilitaire*** :
-- Zoom -> diminution ou augmentation de la taille des cases de la matrice
-- Gestion de la vitesse de la simulation -> diminution ou augmentation du temps de pause entre chaque génération
-- Réinstialisation des données matricielle -> clear
-- Utilisation de ***Generation*** pour la gestion de chaque génération pour une simulation.
+1. Une cellule morte ☠️ devient vivante si elle a exactement trois voisins vivants.
+2. Une cellule vivante 💕 meurt si elle a moins de deux voisins (sous-population) ou plus de trois voisins (surpopulation).
 
+Les cellules vivantes sont représentées par des cases noires, tandis que les cellules mortes sont représentées par des cases blanches.
 
-##  Algorithme de Génération
+## 🛠️ Mon Programme
 
+### **Main.java**
+- Utilise `JFrame` pour l'affichage de la fenêtre.
+- Gère les interactions via `MessageManager`.
+- Utilise `GridPanel` pour dessiner et mettre à jour la grille de cellules.
+
+### **GridPanel.java**
+- Génère une matrice de cellules avec une taille de départ modifiable pour permettre le zoom.
+- Affiche et gère l'état des cellules, en mettant à jour la grille à chaque nouvelle génération.
+  
+### **Système Utilitaire**
+- **Zoom** : Ajustez la taille des cellules dans la grille.
+- **Vitesse de la simulation** : Réglez la durée de la pause entre chaque génération.
+- **Réinitialisation** : Effacez la grille pour repartir de zéro.
+- **Gestion des générations** : Utilise la classe `Generation` pour suivre et gérer chaque génération de cellules.
 
 ## ⌨️ Raccourcis Clavier
-- ENTER : Démarrer/Pause la simulation
-- DELETE/BACK_SPACE : Supprimer tout le panel
-- LEFT : Accélérer la simulation
-- RIGHT : Ralentir la simulation
-- UP : Zoomer
-- DOWN : Dézoomer
-- ESC : Afficher cette fenêtre d'aide
-                
-        
 
-                
-
-
-
-        
-    
+- **ENTER** : Démarrer / Mettre en pause la simulation.
+- **DELETE / BACK_SPACE** : Effacer tout le panel.
+- **LEFT** : Accélérer la simulation.
+- **RIGHT** : Ralentir la simulation.
+- **UP** : Zoomer.
+- **DOWN** : Dézoomer.
+- **ESC** : Afficher la fenêtre d'aide.
